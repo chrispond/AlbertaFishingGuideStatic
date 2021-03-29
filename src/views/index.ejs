@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en_CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="<%= home.seo_description %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<%= home.seo_site_name %>" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:image" content="<%= home.seo_image %>" />
+    <meta property="og:title" content="<%= home.seo_title %>" />
+    <meta property="og:description" content="<%= home.seo_description %>" />
+    <meta property="og:url" content="https://www.albertafishingguide.com/" />
+    <title><%= home.seo_title %></title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11175695-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-11175695-2');
+    </script>
+
+    <link rel="canonical" href="<%= home.seo_canonical %>" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="<%= rootPath %>public/styles/global.css" />
+
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-4591326842141910",
+          enable_page_level_ads: true
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="page-wrapper">
+        <main role="main">
+          <header class="padded-section" id="page-header">
+            <aside class="padded-section" id="cookies-disclaimer">
+              <p><%= home.cookies_disclaimer %></p>
+              <button class="button button-accept">Accept Cookies</button>
+              <button class="button-close">Close</button>
+            </aside>
+            <img class="header-image full-width" src="<%= home.header_image.url%>" with="100%" height="auto" alt="<%= home.header_image.alt%>" />
+            <h1><%= PrismicDOM.RichText.asText(home.page_header) %></h1>
+            <%- PrismicDOM.RichText.asHtml(home.page_copy) %>
+          </header>
+          <section class="padded-section" id="site-section">
+              <hr />
+                <ins class="adsbygoogle"
+                style="display:inline-block;width:728px;height:90px"
+                data-ad-client="ca-pub-4591326842141910"
+                data-ad-slot="1353344983">
+                </ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+              <hr />
+              <div class="fishing-rules">
+                <article class="provincial-fishing">
+                  <h2>Provincial Fishing</h2>
+                  <%- PrismicDOM.RichText.asHtml(home.provincial_fishing) %>
+                </article>
+                <article class="national-fishing">
+                  <h2>National Park Fishing</h2>
+                  <%- PrismicDOM.RichText.asHtml(home.national_park_fishing) %>
+                </article>
+              </div>
+              <hr />
+              <ins class="adsbygoogle"
+                style="display:inline-block;width:728px;height:90px"
+                data-ad-client="ca-pub-4591326842141910"
+                data-ad-slot="1353344983">
+              </ins>
+              <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+              <hr class="margin-bottom-large" />
+              <article>
+                <h2>Proper Fish Handling For Catch & Release</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu metus vel odio accumsan laoreet ac a est. Donec augue purus, dapibus vitae aliquam et, efficitur quis lorem. Donec venenatis vel orci eu fringilla. Morbi a nibh non elit consequat efficitur. Duis fermentum, ligula at convallis sodales, velit felis dignissim felis, in consequat elit turpis at nunc. Nullam at turpis lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ullamcorper scelerisque urna. Nulla pellentesque sagittis metus, in ornare leo porttitor id. Etiam varius, nunc nec vehicula consectetur, ex neque efficitur nulla, in ornare metus felis in dui. Sed molestie scelerisque urna, vel accumsan felis ultrices nec. Donec tincidunt, lectus in fringilla egestas, sapien ipsum semper lorem, in varius massa arcu nec dui.</p>
+                <ul>
+                  <li>Vivamus blandit id sapien ut posuere.</li>
+                  <li>Donec tincidunt, sem vitae sagittis viverra,</li>
+                  <li>nibh erat ullamcorper justo, ac porta mauris velit et felis.</li>
+                  <li>Curabitur vulputate cursus tempor.</li>
+                  <li>Donec hendrerit ultricies mi, suscipit varius tortor lacinia auctor.</li>
+                  <li>Donec vehicula, mauris consectetur dignissim maximus, sem eros pulvinar urna, lobortis auctor ipsum velit ut nisi.</li>
+                  <li>Ut id accumsan est. Donec vel ultricies mi.</li>
+                  <li>In a scelerisque felis, nec varius orci.</li>
+                </ul>
+              </article>
+          </section>
+        </main>
+      </div>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@id": "<%= home.seo_canonical %>",
+        "@type": "Organization",
+        "url": "<%= home.seo_canonical %>",
+        "name": "<%= home.seo_site_name %>"
+        "logo": "<%= home.logo_image %>",
+      }
+    </script>
+    <script src="<%= rootPath %>public/scripts/global.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+/*- VERTICAL SPACING FOR MARGIN & PADDING-*/
+$vertical-gap-xlarge: 6rem;
+$vertical-gap-large: 4.5rem;
+$vertical-gap-medium: 3rem;
+$vertical-gap-small: 1.5rem;
+$vertical-gap-xsmall: 0.5rem;
+
+/*- SECTION SPACING-*/
+$section-side-small: 0.0625;
+$section-side-medium: 0.1045;
+$section-side-large: 0.0977;
+
+$section-side-padding: 6.25%;
+$section-side-padding-tablet: 10.45%;
+$section-side-padding-desktop: 9.77%;
+
+$section-width: calc(100% - #{$section-side-padding * 2});
+$section-width-tablet: calc(100% - #{$section-side-padding-tablet * 2});
+$section-width-desktop: calc(100% - #{$section-side-padding-desktop * 2});

@@ -1,0 +1,47 @@
+/*-----
+  MOBILE/SHARED STYLES FIRST
+-----*/
+
+/*-- FULL WIDTH ------------*/
+@mixin full-width-small {
+ width: calc(100% / #{1- ($section-side-small * 2)});
+ margin-left: -#{$section-side-padding/(1- ($section-side-small * 2))};
+}
+
+@mixin full-width-medium {
+ width: calc(100% / #{1- ($section-side-medium * 2)});
+ margin-left: -#{$section-side-padding-tablet/(1- ($section-side-medium * 2))};
+}
+
+@mixin full-width-large {
+ width: calc(100% / #{1- ($section-side-large * 2)});
+ margin-left: -#{$section-side-padding-desktop/(1- ($section-side-large * 2))};
+}
+
+@include max-width-phone-breakpoint {
+ .full-width,
+ .full-width-small {
+  @include full-width-small;
+ }
+}
+
+@include phone-to-tablet-breakpoints {
+ .full-width,
+ .full-width-medium {
+  @include full-width-medium;
+ }
+}
+
+@include tablet-to-desktop-breakpoints {
+ .full-width,
+ .full-width-large {
+  @include full-width-medium;
+ }
+}
+
+@include min-width-desktop-breakpoint {
+ .full-width,
+ .full-width-large {
+  @include full-width-large;
+ }
+}

@@ -1,0 +1,227 @@
+.cp-carousel {
+  position: relative;
+
+  // Required Carousel Styles
+  &-wrapper {
+    width: calc(100% + 1px);
+    margin: 0 auto;
+    padding: $vertical-gap-small 0;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
+    background: $orange;
+  }
+
+  &:not(.disabled) {
+    .cp-carousel-wrapper {
+      cursor: grab;
+      user-select: none;
+      -webkit-user-drag: none;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
+  }
+
+  &:not(.touch) {
+    .cp-carousel-slider-slide:focus {
+      outline: 0;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 500%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+
+  &-slider {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    list-style: none;
+    font-size: 0%;
+    line-height: 0;
+    text-align: top;
+    white-space: nowrap;
+  }
+
+  &-slider-slide {
+    width: 100%;
+    margin: 0;
+    padding: $vertical-gap-small $vertical-gap-medium;
+    display: inline-block;
+    position: relative;
+
+    vertical-align: top;
+    white-space: normal;
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 500%;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background: #fff;
+      opacity: 0.75;
+    }
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &-next,
+  &-prev {
+    width: calc(#{$vertical-gap-medium} - 0.2rem);
+    height: calc(#{$vertical-gap-medium} - 0.2rem);
+    position: absolute;
+    right: $vertical-gap-small;
+    bottom: 0;
+    overflow: hidden;
+    text-indent: -999px;
+    background: $darkGreen;
+    border: solid 0.2rem #fff;
+    border-radius: 50%;
+    transform: translateY(50%);
+    cursor: pointer;
+
+    &:hover {
+      background: $orange;
+    }
+
+    &:before {
+      content: '';
+      width: 33%;
+      height: 33%;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      bottom: 50%;
+      right: 55%;
+      box-shadow: inset 0.2rem 0.2rem 0 #fff;
+      transform: translate(50%, 50%) rotate(135deg);
+    }
+
+    &.disabled {
+      background: $darkGreen;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  &.disabled {
+    .cp-carousel-next,
+    .cp-carousel-prev {
+      display: none;
+    }
+  }
+
+  &-prev {
+    right: calc(
+      #{$vertical-gap-small} + #{$vertical-gap-xsmall} + #{$vertical-gap-medium}
+    );
+
+    &:before {
+      right: 45%;
+      transform: translate(50%, 50%) rotate(-45deg);
+    }
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    font-size: 0%;
+    line-height: 0;
+    list-style: none;
+    transform: translate(50%, 0);
+
+    > * {
+      width: $vertical-gap-small;
+      height: $vertical-gap-small;
+      margin: 0 #{$vertical-gap-xsmall/2};
+      display: inline-block;
+      background: $darkGreen;
+      border-radius: 50%;
+      border: solid 0.2rem #fff;
+
+      &.current {
+        background: $orange;
+
+        &.half {
+          background: linear-gradient(
+            to right,
+            $orange,
+            $orange 40%,
+            $darkGreen 60%,
+            $darkGreen 100%
+          );
+        }
+      }
+    }
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  // Carousel Content Styles
+  &-slider-slide * {
+    text-decoration: none;
+  }
+
+  h3 {
+    margin-bottom: calc(#{$vertical-gap-small} - 0.7rem);
+    @include sans-serif-font;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 100%;
+    color: $black;
+  }
+  p {
+    margin-bottom: calc(#{$vertical-gap-small} - 0.7rem);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $black;
+  }
+
+  .time-stamp {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.95);
+  }
+}

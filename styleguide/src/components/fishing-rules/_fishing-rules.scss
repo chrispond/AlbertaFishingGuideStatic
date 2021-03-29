@@ -1,0 +1,60 @@
+/*-----
+  MOBILE/SHARED STYLES FIRST
+-----*/
+
+.fishing-rules {
+  margin: $vertical-gap-large 0;
+  display: block;
+  background: url('/assets/images/bg_topographic-pattern.png');
+  background-size: 650px;
+
+  .provincial-fishing,
+  .national-fishing {
+    width: 100%;
+    padding: $vertical-gap-large $vertical-gap-medium;
+    color: #fff;
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .provincial-fishing {
+    background: linear-gradient(
+      rgba(120, 122, 98, 0.98),
+      rgba(120, 122, 98, 0.9)
+    );
+
+    h2,
+    a {
+      color: $lightGreen;
+    }
+  }
+
+  .national-fishing {
+    background: linear-gradient(
+      rgba(157, 176, 146, 0.98),
+      rgba(157, 176, 146, 0.9)
+    );
+
+    h2,
+    a {
+      color: $darkGreen;
+    }
+  }
+}
+
+@include min-width-tablet-breakpoint {
+  .fishing-rules {
+    display: flex;
+  }
+
+  .provincial-fishing,
+  .national-fishing {
+    width: 50%;
+  }
+}

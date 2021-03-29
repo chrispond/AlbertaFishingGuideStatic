@@ -1,0 +1,32 @@
+* {
+ box-sizing: border-box;
+}
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+fieldset,
+figure,
+figcaption,
+hr,
+button {
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
+html {
+ font-size: 62.5%;
+}
+
+button {
+ background: none;
+ border: none;
+}
+
+pre,
+xmp {
+ white-space: pre-wrap;
+}

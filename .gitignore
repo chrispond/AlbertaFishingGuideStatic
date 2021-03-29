@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules
+lambda-functions
+
+#Styleguide directories
+styleguide/assets
+styleguide/boilerplate
+styleguide/builds
+
+
+Ruby

@@ -1,0 +1,89 @@
+.a11y {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.button {
+  padding: $vertical-gap-small;
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  border: solid 1px $orange;
+  border-radius: 3px;
+  background: $orange;
+
+  &:hover {
+    background: rgba(251, 159, 78, 0.5);
+  }
+}
+
+.button-close {
+  width: $vertical-gap-medium;
+  height: $vertical-gap-medium;
+  position: absolute;
+  top: $vertical-gap-small;
+  right: $vertical-gap-small;
+  text-indent: -9999px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: rotate(-45deg);
+
+  &:hover {
+    background: transparent;
+    border: solid 1px #000;
+
+    &:before,
+    &:after {
+      background: #000;
+    }
+  }
+
+  &:before {
+    content: '';
+    width: 2px;
+    height: 50%;
+    background: $yellow;
+    @include util-absolute-center;
+  }
+
+  &:after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: $yellow;
+    @include util-absolute-center;
+  }
+}
+
+.margin-bottom-large {
+  margin-bottom: $vertical-gap-large;
+}
+
+/*- BLOCK: SECTION -*/
+.padded-section {
+  padding-right: $section-side-padding;
+  padding-left: $section-side-padding;
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include min-width-phone-breakpoint {
+  .padded-section {
+    padding-right: $section-side-padding-tablet;
+    padding-left: $section-side-padding-tablet;
+  }
+}
+
+@include min-width-desktop-breakpoint {
+  .padded-section {
+    padding-right: $section-side-padding-desktop;
+    padding-left: $section-side-padding-desktop;
+  }
+}

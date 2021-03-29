@@ -1,0 +1,36 @@
+/*-----
+  MOBILE/SHARED STYLES FIRST
+-----*/
+
+#cookies-disclaimer {
+  width: 100%;
+  padding-top: $vertical-gap-small;
+  padding-right: $vertical-gap-xlarge;
+  padding-bottom: $vertical-gap-small;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: $font-weight-bold;
+  background: rgba(255, 207, 99, 0.9);
+
+  &.hide {
+    display: none;
+  }
+
+  p {
+    margin-bottom: $vertical-gap-small;
+  }
+
+  .button-accept {
+    &:before {
+      content: '';
+      width: 16px;
+      height: 7px;
+      margin-right: $vertical-gap-small;
+      display: inline-block;
+      border-bottom: solid 3px #000;
+      border-left: solid 3px #000;
+      transform: rotate(-45deg);
+    }
+  }
+}

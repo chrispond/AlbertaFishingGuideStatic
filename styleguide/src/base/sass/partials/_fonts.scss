@@ -1,0 +1,17 @@
+//Font Familys
+$sans-serif-font: 'Yantramanav', sans-serif;
+
+//Font Size
+$font-size-body-mobile: 1.8rem;
+$font-size-body-desktop: 1.8rem;
+$font-size-body-large-desktop: 1.8rem;
+
+//Font Weights
+$font-weight-regular: 100;
+$font-weight-bold: 500;
+
+@mixin sans-serif-font {
+  font-family: $sans-serif-font;
+  font-weight: $font-weight-regular;
+  letter-spacing: 0;
+}

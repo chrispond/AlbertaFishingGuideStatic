@@ -1,0 +1,9 @@
+/*-----
+  MOBILE/SHARED STYLES FIRST
+-----*/
+
+.cp-trim-string.trimmed{
+  &:after{
+    content:'...';
+  }
+}

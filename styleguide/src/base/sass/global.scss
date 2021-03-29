@@ -1,0 +1,17 @@
+/* Base Styles */
+@import './partials/reset';
+@import './partials/variables';
+@import './partials/breakpoints';
+@import './partials/colors';
+@import './partials/utils';
+@import './partials/fonts';
+@import './partials/elements';
+@import './partials/template';
+
+/* Component Styles */
+@import '../../components/cookies-disclaimer/cookies-disclaimer';
+@import '../../components/fishing-rules/fishing-rules';
+
+/* Override Styles */
+@import './partials/global-classes';
+@import './partials/override-classes';

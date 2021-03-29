@@ -1,0 +1,21 @@
+<!-- build:title -->Trim Paragraph Component
+<!-- /build:title -->
+<!-- build:description -->Trims a paragraph if it exceeds a certain number of characters, and allows the user to toggle to see more or hide text.
+<!-- /build:description -->
+<!-- build:content -->
+<!-- partial:./example.html -->
+<!-- partial -->
+<!-- /build:content -->
+<!-- build:script -->
+<script>
+  const cpTrimmedParagraphs = document.querySelectorAll('.cp-trim-paragraph');
+  const cpTrimmedParagraphsLength = cpTrimmedParagraphs.length;
+
+  if (cpTrimmedParagraphsLength > 0) {
+    for (let i = 0; i < cpTrimmedParagraphsLength; i++) {
+      const item = cpTrimmedParagraphs[i];
+      new CpTrimParagraph(item);
+    }
+  }
+</script>
+<!-- /build:script -->

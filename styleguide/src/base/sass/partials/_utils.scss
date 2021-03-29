@@ -1,0 +1,21 @@
+//Center position
+@mixin util-absolute-center {
+ position: absolute;
+ right: 50%;
+ bottom: 50%;
+ transform: translate(50%, 50%);
+}
+
+//Horizontal center position
+@mixin util-absolute-horizontal-center {
+ position: absolute;
+ right: 50%;
+ transform: translateX(50%);
+}
+
+//Vertical center position
+@mixin util-absolute-vertical-center {
+ position: absolute;
+ bottom: 50%;
+ transform: translateY(50%);
+}

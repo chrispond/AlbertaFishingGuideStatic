@@ -1,0 +1,21 @@
+<!-- build:title -->Trim String Component
+<!-- /build:title -->
+<!-- build:description -->Trims a string if it exceeds a certain number of characters, and adds an elipsis.
+<!-- /build:description -->
+<!-- build:content -->
+<!-- partial:./example.html -->
+<!-- partial -->
+<!-- /build:content -->
+<!-- build:script -->
+<script>
+  const cpTrimmedStrings = document.querySelectorAll('.cp-trim-string');
+  const cpTrimmedStringsLength = cpTrimmedStrings.length;
+
+  if (cpTrimmedStringsLength > 0) {
+    for (let i = 0; i < cpTrimmedStringsLength; i++) {
+      const item = cpTrimmedStrings[i];
+      new CpTrimString(item);
+    }
+  }
+</script>
+<!-- /build:script -->
