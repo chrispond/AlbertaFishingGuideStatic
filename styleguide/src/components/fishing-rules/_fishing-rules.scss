@@ -8,6 +8,10 @@
   background: url('/assets/images/bg_topographic-pattern.png');
   background-size: 650px;
 
+  a {
+    font-weight: $font-weight-bold;
+  }
+
   .provincial-fishing,
   .national-fishing {
     width: 100%;
@@ -29,9 +33,11 @@
       rgba(120, 122, 98, 0.9)
     );
 
-    h2,
-    a {
+    h2 {
       color: $lightGreen;
+    }
+    a {
+      color: $orange;
     }
   }
 

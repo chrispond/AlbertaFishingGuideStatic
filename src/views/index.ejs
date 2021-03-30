@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en_CA">
+<html lang="en-CA">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -63,11 +63,9 @@
               <hr />
               <div class="fishing-rules">
                 <article class="provincial-fishing">
-                  <h2>Provincial Fishing</h2>
                   <%- PrismicDOM.RichText.asHtml(home.provincial_fishing) %>
                 </article>
                 <article class="national-fishing">
-                  <h2>National Park Fishing</h2>
                   <%- PrismicDOM.RichText.asHtml(home.national_park_fishing) %>
                 </article>
               </div>
@@ -80,18 +78,7 @@
               <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
               <hr class="margin-bottom-large" />
               <article>
-                <h2>Proper Fish Handling For Catch & Release</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu metus vel odio accumsan laoreet ac a est. Donec augue purus, dapibus vitae aliquam et, efficitur quis lorem. Donec venenatis vel orci eu fringilla. Morbi a nibh non elit consequat efficitur. Duis fermentum, ligula at convallis sodales, velit felis dignissim felis, in consequat elit turpis at nunc. Nullam at turpis lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur ullamcorper scelerisque urna. Nulla pellentesque sagittis metus, in ornare leo porttitor id. Etiam varius, nunc nec vehicula consectetur, ex neque efficitur nulla, in ornare metus felis in dui. Sed molestie scelerisque urna, vel accumsan felis ultrices nec. Donec tincidunt, lectus in fringilla egestas, sapien ipsum semper lorem, in varius massa arcu nec dui.</p>
-                <ul>
-                  <li>Vivamus blandit id sapien ut posuere.</li>
-                  <li>Donec tincidunt, sem vitae sagittis viverra,</li>
-                  <li>nibh erat ullamcorper justo, ac porta mauris velit et felis.</li>
-                  <li>Curabitur vulputate cursus tempor.</li>
-                  <li>Donec hendrerit ultricies mi, suscipit varius tortor lacinia auctor.</li>
-                  <li>Donec vehicula, mauris consectetur dignissim maximus, sem eros pulvinar urna, lobortis auctor ipsum velit ut nisi.</li>
-                  <li>Ut id accumsan est. Donec vel ultricies mi.</li>
-                  <li>In a scelerisque felis, nec varius orci.</li>
-                </ul>
+                <%- PrismicDOM.RichText.asHtml(home.conservation_post) %>
               </article>
           </section>
         </main>
