@@ -14,7 +14,7 @@
 	max-width:728px;
 	height:100px;
   margin: $vertical-gap-small auto;
-	display:inline-block;
+	display:block;
 	overflow:hidden;
 	background:#999;
 }
@@ -27,7 +27,7 @@
 
 @include min-width-desktop-breakpoint {
   .adsbygoogle {
-    height: 60px;
+    height: 90px;
   }
 }
 
