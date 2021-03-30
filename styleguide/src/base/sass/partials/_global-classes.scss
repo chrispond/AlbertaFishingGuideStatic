@@ -8,6 +8,29 @@
   white-space: nowrap;
 }
 
+.adsbygoogle {
+  width:100%;
+	min-width:320px;
+	max-width:728px;
+	height:100px;
+  margin: $vertical-gap-small auto;
+	display:inline-block;
+	overflow:hidden;
+	background:#999;
+}
+
+@include min-width-tablet-breakpoint {
+  .adsbygoogle {
+    height: 60px;
+  }
+}
+
+@include min-width-desktop-breakpoint {
+  .adsbygoogle {
+    height: 60px;
+  }
+}
+
 .button {
   padding: $vertical-gap-small;
   text-transform: uppercase;
