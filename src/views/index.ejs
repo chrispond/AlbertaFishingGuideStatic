@@ -57,7 +57,7 @@
               <button class="button button-accept">Accept Cookies</button>
               <button class="button-close">Close</button>
             </aside>
-            <img class="header-image full-width" src="<%= home.header_image.url%>" with="100%" height="auto" alt="<%= home.header_image.alt%>" />
+            <img class="header-image full-width" src="<%= home.header_image.url%>" with="<%= home.header_image.dimensions.width%>" height="<%= home.header_image.dimensions.height%>" alt="<%= home.header_image.alt%>" />
             <h1><%= PrismicDOM.RichText.asText(home.page_header) %></h1>
             <%- PrismicDOM.RichText.asHtml(home.page_copy) %>
           </header>
@@ -94,7 +94,7 @@
               <hr />
               <ins class="adsbygoogle"
                   data-ad-client="ca-pub-4591326842141910"
-                  data-ad-slot="4717576385"
+                  data-ad-slot="2830078182"
                   data-ad-format="auto"
                   data-full-width-responsive="true"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
